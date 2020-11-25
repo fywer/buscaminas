@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.FXMLCrearCuentaController">
+   <children>
+      <SplitPane dividerPositions="0.3003194888178914" layoutX="6.0" layoutY="6.0" prefHeight="468.0" prefWidth="628.0">
+        <items>
+            <ListView fx:id="lvwMenu" prefHeight="466.0" prefWidth="234.0" style="-fx-background-color: #383838;">
+                <items>
+                  <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Iniciar Sesión" />
+                      <String fx:value="Crear Cuenta" />
+                      <String fx:value="Ayuda" />
+                  </FXCollections>
+              </items>
+            </ListView>
+            <VBox fx:id="vbxPanel" prefHeight="466.0" prefWidth="399.0">
+               <children>
+                  <GridPane prefHeight="214.0" prefWidth="307.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Correo electrónico:" GridPane.halignment="RIGHT">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </Label>
+                        <Label text="Elija una contraseña:" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </Label>
+                        <Label text="Nombre de usuario:" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </Label>
+                        <Label text="Fecha de nacimiento:" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </Label>
+                        <Label text="Género:" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </Label>
+                        <Button mnemonicParsing="false" onAction="#btnCrearCuenta" prefHeight="32.0" prefWidth="217.0" text="Crear Cuenta" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <TextField fx:id="tfdCorreo" minHeight="32.0" prefHeight="32.0" prefWidth="199.0" promptText="Correo electrónico" GridPane.columnIndex="1" />
+                        <PasswordField fx:id="tfdContrasena" prefHeight="32.0" prefWidth="199.0" promptText="Contraseña" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="tfdUsuario" minHeight="32.0" prefHeight="32.0" prefWidth="202.0" promptText="Nick de Jugador" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <DatePicker fx:id="dprNacimiento" prefHeight="32.0" prefWidth="219.0" promptText="15/06/1992" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <ComboBox fx:id="cbxGenero" prefHeight="32.0" prefWidth="219.0" promptText="Seleccione su género" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="Hombre" />
+                                    <String fx:value="Mujer" />
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="20.0" right="50.0" top="100.0" />
+                     </VBox.margin>
+                  </GridPane>
+               </children>
+            </VBox>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
